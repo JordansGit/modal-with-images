@@ -1,0 +1,221 @@
+/* resets */ 
+body, header, h1, p {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* TEXT */
+body {
+  font-family: Arial, sans-serif;
+}
+
+header h1, footer p {
+  text-align: center;
+}
+
+header h1 {
+  line-height: 14vh;
+}
+
+footer p {
+  line-height: 10vh;
+}
+
+
+/* HEADER */ 
+
+header {
+  background-color: white;
+  width: 100%;
+  height: 15vh;
+
+}
+
+/* #MIDDLE SECTION */ 
+
+#middle {
+  display: flex;
+}
+
+aside {
+  background-color: green;
+  width: 10%;
+  margin: 0;
+  
+}
+
+section {
+  background-color: grey;
+  width: 100%;
+  margin: 0;
+
+}
+
+.box-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.box {
+  border: 1px solid black;
+  width: calc(20% - 22px);
+  margin-right: 20px;
+  margin-bottom: 20px;
+  background-color: LightBlue;
+  cursor: pointer;
+  transition: 0.4s;
+  position: relative; /* necessary, not sure why it causes this effect */ 
+}
+
+.box:hover {background-color: #8aadb8;} 
+
+.box img {
+  position: absolute; /* Take your picture out of the flow */
+  width: 100%; /* This if for the object-fit */
+  height: 100%; /* This if for the object-fit */
+  object-fit: contain; /* Equivalent of the background-size: cover; of a background-image */ /* keeps aspect ratio of image + fits it in container */
+}
+
+.box::after { /* necassary, not sure why it causes this effect */
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+
+/* FOOTER */ 
+
+footer {
+  background-color: white;
+  width: 100%;
+  height: 10vh;
+  font-size: 18px;
+}
+
+
+/* Media Queries */ 
+@media only screen and (max-width: 1725px) {
+  .box {
+    width: calc(25% - 22px);
+  }
+}
+
+@media only screen and (max-width: 1279px) {
+  .box {
+    width: calc(33.3% - 22px);
+  }
+}
+
+@media only screen and (max-width: 879px) {
+  .box {
+    width: calc(50% - 22px);
+  }
+}
+
+@media only screen and (max-width: 604px) {
+  .box {
+    width: calc(100% - 22px);
+  }
+  .modal-content {
+    width: 100%;
+  }
+}
+
+
+/* MODAL */ 
+
+/* The Modal (background) */
+.modal {
+  display: none; 
+  position: fixed; 
+  width: 100%; 
+  height: 100%; 
+  background-color: rgba(0,0,0,0.9); 
+  padding-top: 30px; /* leave as this for now, will have to go back to ideally center the image */
+  top: 0; /* if i remove this, the modal disappears. idk why */ 
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto; /* centers the image vertically after display block is in place */
+  display: block; /* makes the image element take up the entire width */ 
+  width: 80%;
+  max-width: 700px;
+}
+
+#caption {
+  text-align: center;
+  color: white;
+  padding: 10px 0;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+widths: 
+1725+ 5boxes (desktop) 
+1280 - 1725 4boxes. (small laptop) 
+880 - 1279 3boxes (tablet) 
+605 - 879 2boxes. (tablet horizontal) (maybe 500-880) 
+<605 1box. (phone) (maybe 500) 
+*/
+
+
+/* upload to github, 
+
+/* 
+  figure out why the things i've commented above work. why is it necessary. how does it work. write notes. maybe in a text file inside this project folder. 
+    1 element of .box (position: relative)   
+    all of .box img (position, width, height, object-fit) 
+    all of .box::after (content, display, padding-bottom) 
+    .modal top:0 element. 
+
+    notes: not sure, but they all work together. Need coaching on this. 
+
+  add a proper js modal to this site. do the same with the duplicate with images site. 
+
+  - i've got a basic 1 from w3schools. just going through the code and editing it now. on padding top of modal. 
+
+*/
+

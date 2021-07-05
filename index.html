@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Header</h1>
+  </header>
+
+  <div id="middle">
+    <aside id="left-aside">
+    </aside>
+  
+    <section>
+      <div class="box-row">
+        <div class="box">
+          <img src="images/articuno.png" alt="Articuno" id="img01">
+        </div>
+        <div class="box">
+          <img src="images/bulbasaur.png" alt="Bulbasaur" id="img02">          
+        </div>
+        <div class="box">
+          <img src="images/charizard.png" alt="Charizard" id="img03">           
+        </div>
+        <div class="box">
+          <img src="images/charmander.png" alt="Charmander" id="img04">           
+        </div>
+        <div class="box">
+          <img src="images/cyndaquil.png" alt="Cyndaquil" id="img05">           
+        </div>
+        <div class="box">
+          <img src="images/gengar.png" alt="Gengar" id="img06">           
+        </div>
+        <div class="box">
+          <img src="images/haunter.png" alt="Haunter" id="img07">           
+        </div>
+        <div class="box">
+          <img src="images/ivysaur.png" alt="Ivysaur" id="img08">           
+        </div>
+        <div class="box">
+          <img src="images/pikachu.png" alt="Pikachu" id="img09">           
+        </div>
+        <div class="box">
+          <img src="images/pokeballs.png" alt="Pokeballs" id="img10">           
+        </div>
+        <div class="box">
+          <img src="images/quilava.png" alt="Quilava" id="img11">           
+        </div>
+        <div class="box">
+          <img src="images/snorlax.png" alt="Snorlax" id="img12">           
+        </div>
+        <div class="box">
+          <img src="images/squirtle.png" alt="Squirtle" id="img13">           
+        </div>
+        <div class="box">
+          <img src="images/zapdos.png" alt="Zapdos" id="img14">           
+        </div>
+
+
+      </div>
+    </section>
+  
+    <aside id="right-aside">
+    </aside>
+  </div>
+
+  <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <div id="caption"></div>
+    <img class="modal-content" id="modalImg">
+  </div>
+
+  <footer>
+    <p>Images from:  <a href="https://pngimg.com/imgs/fantasy/pokemon/">  https://pngimg.com/imgs/fantasy/pokemon/</a></p>
+  </footer>
+
+
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+<!--
+https://webdesign.tutsplus.com/articles/modal-and-modeless-boxes-in-web-design--webdesign-2282
+
+note: I was planning on doing this solely with floats, however doing it this way and making it fully response will take too much time, as I would have to do a media query everytime a box goes on to a new line. 
+So now I'm just going to use flexbox. 
+
+-->
+
